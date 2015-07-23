@@ -1,0 +1,7 @@
+Create a github repo, go into its settings, add a push webhook and capture its output with netcat or similar.
+
+Example capture command: nc -l 0.0.0.0 -p 1515 > json
+
+Then just set the webhook URL to http://<your IP>:1515
+
+You can write a basic service wrapper around this to automatically update another repository anytime people push to github.
